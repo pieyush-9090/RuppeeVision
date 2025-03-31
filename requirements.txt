@@ -5,3 +5,4 @@ numpy
 tensorflow
 joblib
 scikit-learn
+waitress
