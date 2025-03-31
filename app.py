@@ -1,3 +1,6 @@
+import os
+# 🚨 Disable GPU since Railway does not support it
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 from flask import Flask, request, jsonify
 import pandas as pd
 import numpy as np
