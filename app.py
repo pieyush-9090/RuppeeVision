@@ -5,8 +5,6 @@ import joblib
 import tensorflow as tf
 import datetime
 from flask_cors import CORS
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -70,5 +68,4 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Ensure PORT is retrieved from Railway
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(host=0.0.0.0,debug=True)
